@@ -1,5 +1,9 @@
 import os
 import numpy as np
+import os
+os.environ['CUDA_VISIBLE_DEVICES'] = '-1'   # Disable GPU / CUDA lookup
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'    # Suppress TensorFlow warnings
+
 import tensorflow as tf
 from PIL import Image
 from django.conf import settings
