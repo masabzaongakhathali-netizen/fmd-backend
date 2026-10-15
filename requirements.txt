@@ -3,5 +3,6 @@ django-cors-headers==4.6.0
 tflite-runtime==2.14.0
 pillow==11.0.0
 numpy==1.26.4
+matplotlib==3.9.2
 gunicorn==23.0.0
 whitenoise==6.8.2

@@ -141,3 +141,18 @@ CORS_ALLOW_ALL_ORIGINS = True
 # Static files for whitenoise
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# Session / CSRF for cross-origin frontend
+CSRF_TRUSTED_ORIGINS = [
+    'https://fmd-frontend.vercel.app',
+    'https://*.vercel.app',
+    'http://localhost:5173',
+]
+
+# Allow credentials (cookies) from the frontend
+CORS_ALLOW_CREDENTIALS = True
+
+# Session cookie settings (safe for cross-site)
+SESSION_COOKIE_SAMESITE = 'None'
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SAMESITE = 'None'
+CSRF_COOKIE_SECURE = True
